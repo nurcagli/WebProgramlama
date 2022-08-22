@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rabii\\source\\repos\\WebUygulamaIdentity\\WebUygulamaIdentity\\WebUygulamaIdentity.csproj": {}
+    "C:\\Users\\rabii\\OneDrive\\Masaüstü\\WebProgramlama\\WebProgramlama\\WebUygulamaIdentity\\WebUygulamaIdentity\\WebUygulamaIdentity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rabii\\source\\repos\\WebUygulamaIdentity\\WebUygulamaIdentity\\WebUygulamaIdentity.csproj": {
+    "C:\\Users\\rabii\\OneDrive\\Masaüstü\\WebProgramlama\\WebProgramlama\\WebUygulamaIdentity\\WebUygulamaIdentity\\WebUygulamaIdentity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rabii\\source\\repos\\WebUygulamaIdentity\\WebUygulamaIdentity\\WebUygulamaIdentity.csproj",
+        "projectUniqueName": "C:\\Users\\rabii\\OneDrive\\Masaüstü\\WebProgramlama\\WebProgramlama\\WebUygulamaIdentity\\WebUygulamaIdentity\\WebUygulamaIdentity.csproj",
         "projectName": "WebUygulamaIdentity",
-        "projectPath": "C:\\Users\\rabii\\source\\repos\\WebUygulamaIdentity\\WebUygulamaIdentity\\WebUygulamaIdentity.csproj",
+        "projectPath": "C:\\Users\\rabii\\OneDrive\\Masaüstü\\WebProgramlama\\WebProgramlama\\WebUygulamaIdentity\\WebUygulamaIdentity\\WebUygulamaIdentity.csproj",
         "packagesPath": "C:\\Users\\rabii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rabii\\source\\repos\\WebUygulamaIdentity\\WebUygulamaIdentity\\obj\\",
+        "outputPath": "C:\\Users\\rabii\\OneDrive\\Masaüstü\\WebProgramlama\\WebProgramlama\\WebUygulamaIdentity\\WebUygulamaIdentity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
