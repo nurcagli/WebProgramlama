@@ -219,6 +219,81 @@ namespace WebUygulamaIdentity.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("WebUygulamaIdentity.Models.Company", b =>
+                {
+                    b.Property<int>("CompanyId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("CompanyId");
+
+                    b.ToTable("Companies");
+                });
+
+            modelBuilder.Entity("WebUygulamaIdentity.Models.FurnitureWork", b =>
+                {
+                    b.Property<int>("FurnitureWorkId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("FurnitureWorkId");
+
+                    b.ToTable("FurnitureWorks");
+                });
+
+            modelBuilder.Entity("WebUygulamaIdentity.Models.InteriorWork", b =>
+                {
+                    b.Property<int>("InteriorWorkId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("InteriorWorkId");
+
+                    b.ToTable("InteriorWorks");
+                });
+
+            modelBuilder.Entity("WebUygulamaIdentity.Models.OutsideWork", b =>
+                {
+                    b.Property<int>("OutsideWorkId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("OutsideWorkId");
+
+                    b.ToTable("OutsideWorks");
+                });
+
+            modelBuilder.Entity("WebUygulamaIdentity.Models.Work", b =>
+                {
+                    b.Property<int>("WorkId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("FurnitureWorkId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("InteriorWorkId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OutsideWorkId")
+                        .HasColumnType("int");
+
+                    b.HasKey("WorkId");
+
+                    b.HasIndex("FurnitureWorkId");
+
+                    b.HasIndex("InteriorWorkId");
+
+                    b.HasIndex("OutsideWorkId");
+
+                    b.ToTable("Works");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -266,6 +341,27 @@ namespace WebUygulamaIdentity.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("WebUygulamaIdentity.Models.Work", b =>
+                {
+                    b.HasOne("WebUygulamaIdentity.Models.FurnitureWork", "FurnitureWork")
+                        .WithMany()
+                        .HasForeignKey("FurnitureWorkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebUygulamaIdentity.Models.InteriorWork", "InteriorWork")
+                        .WithMany()
+                        .HasForeignKey("InteriorWorkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebUygulamaIdentity.Models.OutsideWork", "OutsideWork")
+                        .WithMany()
+                        .HasForeignKey("OutsideWorkId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

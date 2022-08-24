@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WebUygulamaIdentity.Models;
 
 namespace WebUygulamaIdentity.Data
 {
@@ -11,6 +12,16 @@ namespace WebUygulamaIdentity.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+
+     
+
         }
+
+        public DbSet<Work> Works { get; set; }
+        public DbSet<InteriorWork> InteriorWorks { get; set; }
+        public DbSet<OutsideWork> OutsideWorks { get; set; }
+        public DbSet<FurnitureWork> FurnitureWorks { get; set; }
+        public DbSet<Company> Companies { get; set; }
+
     }
 }
